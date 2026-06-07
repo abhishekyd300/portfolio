@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-export function HeroSection({ profileImg, onProfileChange }) {
+export function HeroSection() {
   const [typed, setTyped] = useState("");
   const roles = [
     "Full-Stack Developer",
@@ -8,7 +8,7 @@ export function HeroSection({ profileImg, onProfileChange }) {
     "AWS Cloud Practitioner",
     "Problem Solver"
   ];
-  
+
   const ri = useRef(0);
   const ci = useRef(0);
   const del = useRef(false);
@@ -38,8 +38,6 @@ export function HeroSection({ profileImg, onProfileChange }) {
     const t = setTimeout(tick, 500);
     return () => clearTimeout(t);
   }, []);
-
-  const fileRef = useRef();
 
   return (
     <section
@@ -123,9 +121,7 @@ export function HeroSection({ profileImg, onProfileChange }) {
               borderRadius: "50%",
               background: "linear-gradient(135deg, #7c3aed, #4f46e5, #06b6d4)",
               padding: 3,
-              cursor: "pointer"
             }}
-            onClick={() => fileRef.current.click()}
           >
             <div
               style={{
@@ -139,31 +135,22 @@ export function HeroSection({ profileImg, onProfileChange }) {
                 justifyContent: "center"
               }}
             >
-              {profileImg ? (
-                <img
-                  src={profileImg}
-                  alt="Profile"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              ) : (
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
-                  <span style={{ fontSize: 36 }}>👤</span>
-                  <span
-                    style={{
-                      fontSize: 9,
-                      color: "rgba(255, 255, 255, 0.4)",
-                      letterSpacing: "0.05em",
-                      textAlign: "center",
-                      lineHeight: 1.3
-                    }}
-                  >
-                    Click to<br />upload
-                  </span>
-                </div>
-              )}
+              <img
+                src="../public/profile.jpg"
+                alt="Profile"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+              <div style={{ display: "none", flexDirection: "column", alignItems: "center", gap: 6 }}>
+                <span style={{ fontSize: 36 }}>👤</span>
+              </div>
             </div>
           </div>
-          
+
           {/* Online Dot */}
           <div
             style={{
@@ -179,49 +166,6 @@ export function HeroSection({ profileImg, onProfileChange }) {
             }}
           />
 
-          {/* Upload Hint Overlay on Hover */}
-          {profileImg && (
-            <div
-              onClick={() => fileRef.current.click()}
-              style={{
-                position: "absolute",
-                inset: 3,
-                borderRadius: "50%",
-                background: "rgba(0, 0, 0, 0)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                cursor: "pointer",
-                opacity: 0,
-                transition: "opacity 0.2s"
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "rgba(0, 0, 0, 0.55)";
-                e.currentTarget.style.opacity = 1;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "rgba(0, 0, 0, 0)";
-                e.currentTarget.style.opacity = 0;
-              }}
-            >
-              <span style={{ color: "#fff", fontSize: 11, fontWeight: 600 }}>Change</span>
-            </div>
-          )}
-
-          <input
-            ref={fileRef}
-            type="file"
-            accept="image/*"
-            style={{ display: "none" }}
-            onChange={(e) => {
-              const file = e.target.files[0];
-              if (file) {
-                const reader = new FileReader();
-                reader.onload = (ev) => onProfileChange(ev.target.result);
-                reader.readAsDataURL(file);
-              }
-            }}
-          />
         </div>
 
         {/* Hero Text Content */}
@@ -241,7 +185,7 @@ export function HeroSection({ profileImg, onProfileChange }) {
           >
             👋 CS Undergraduate · Parul University · CGPA 7.85
           </div>
-          
+
           <h1
             style={{
               fontFamily: "'Space Grotesk', sans-serif",

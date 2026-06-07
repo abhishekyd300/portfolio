@@ -10,12 +10,11 @@ import { ContactSection } from "./components/ContactSection";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("About");
-  const [profileImg, setProfileImg] = useState(null);
 
   return (
     <div style={{ background: "#050714", minHeight: "100vh" }}>
       <Navbar active={activeSection} setActive={setActiveSection} />
-      <HeroSection profileImg={profileImg} onProfileChange={setProfileImg} />
+      <HeroSection />
       <AboutSection />
       <EducationSection />
       <SkillsSection />

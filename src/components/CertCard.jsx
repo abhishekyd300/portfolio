@@ -3,10 +3,8 @@ import React, { useState, useRef } from "react";
 export function CertCard({ cert }) {
   const [hovered, setHovered] = useState(false);
   const [imgErr, setImgErr] = useState(false);
-  const [uploadedImg, setUploadedImg] = useState(null);
-  const fileRef = useRef();
 
-  const displayImg = uploadedImg || (cert.badge && !imgErr ? cert.badge : null);
+  const displayImg = cert.badge && !imgErr ? cert.badge : null;
 
   return (
     <div
@@ -25,15 +23,12 @@ export function CertCard({ cert }) {
         flexDirection: "column"
       }}
     >
-      {/* Image Area - click to upload */}
       <div
-        onClick={() => fileRef.current.click()}
         style={{
           position: "relative",
           width: "100%",
           paddingBottom: "65%",
           background: displayImg ? "rgba(0, 0, 0, 0.3)" : `linear-gradient(135deg, ${cert.color}12, rgba(255, 255, 255, 0.03))`,
-          cursor: "pointer",
           overflow: "hidden",
           flexShrink: 0
         }}
@@ -60,71 +55,13 @@ export function CertCard({ cert }) {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              justifyContent: "center",
-              gap: 8
+              justifyContent: "center"
             }}
           >
             <span style={{ fontSize: 42 }}>{cert.fallback}</span>
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3 }}>
-              <span style={{ color: cert.color, fontSize: 11, fontWeight: 700, letterSpacing: "0.06em" }}>
-                📎 ADD IMAGE
-              </span>
-              <span style={{ color: "rgba(255, 255, 255, 0.3)", fontSize: 10 }}>Click to upload</span>
-            </div>
           </div>
         )}
 
-        {/* Upload Overlay on Hover if image already exists */}
-        {displayImg && (
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background: "rgba(0, 0, 0, 0)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              opacity: 0,
-              transition: "all 0.2s"
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "rgba(0, 0, 0, 0.5)";
-              e.currentTarget.style.opacity = "1";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "rgba(0, 0, 0, 0)";
-              e.currentTarget.style.opacity = "0";
-            }}
-          >
-            <span
-              style={{
-                color: "#fff",
-                fontSize: 11,
-                fontWeight: 700,
-                background: "rgba(0, 0, 0, 0.5)",
-                padding: "6px 12px",
-                borderRadius: 8
-              }}
-            >
-              🔄 Replace image
-            </span>
-          </div>
-        )}
-
-        <input
-          ref={fileRef}
-          type="file"
-          accept="image/*"
-          style={{ display: "none" }}
-          onChange={(e) => {
-            const file = e.target.files[0];
-            if (file) {
-              const reader = new FileReader();
-              reader.onload = (ev) => setUploadedImg(ev.target.result);
-              reader.readAsDataURL(file);
-            }
-          }}
-        />
       </div>
 
       {/* Card Info */}

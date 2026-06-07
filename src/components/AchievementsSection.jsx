@@ -74,7 +74,7 @@ export function AchievementsSection() {
               Certifications
             </h3>
             <p style={{ color: "rgba(255, 255, 255, 0.35)", fontSize: 13 }}>
-              Click any card's image area to upload your certificate image
+              My professional credentials and certifications
             </p>
           </div>
         </FadeIn>
