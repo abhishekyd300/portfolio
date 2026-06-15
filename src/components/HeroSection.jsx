@@ -136,7 +136,7 @@ export function HeroSection() {
               }}
             >
               <img
-                src="../public/profile.jpg"
+                src="/profile.jpg"
                 alt="Profile"
                 onError={(e) => {
                   e.target.onerror = null;
