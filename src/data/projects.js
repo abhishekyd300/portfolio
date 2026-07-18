@@ -23,7 +23,7 @@ export const projects = [
     tags: ["MERN", "Groq API", "AI/LLM", "PDF Export"],
     color: "#6366f1",
     icon: "🤖",
-    liveUrl: "https://github.com/abhishekyd300", // replace with live URL
+    liveUrl: "https://smartaicv.vercel.app/", // replace with live URL
     githubUrl: "https://github.com/abhishekyd300",
     bullets: [
       "AI-powered resume builder using Groq LLM API",
