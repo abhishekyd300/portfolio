@@ -8,7 +8,7 @@ export const projects = [
     tags: ["MERN", "JWT", "MongoDB", "REST API"],
     color: "#22c55e",
     icon: "🌾",
-    liveUrl: "https://github.com/abhishekyd300", // replace with live URL
+    liveUrl: "https://krishi-setu-wine.vercel.app/", // replace with live URL
     githubUrl: "https://github.com/abhishekyd300",
     bullets: [
       "Full-stack F2C marketplace eliminating middlemen",
