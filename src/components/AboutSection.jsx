@@ -36,7 +36,7 @@ export function AboutSection() {
           >
             <h3
               style={{
-                fontFamily: "'Space Grotesk', sans-serif",
+                fontFamily: "'Outfit', sans-serif",
                 color: "#fff",
                 fontSize: 20,
                 fontWeight: 700,

@@ -53,7 +53,7 @@ export function ProjectsSection() {
               
               <h3
                 style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   color: "#fff",
                   fontSize: 22,
                   fontWeight: 700,

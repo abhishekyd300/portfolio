@@ -99,7 +99,7 @@ export function CertCard({ cert }) {
             lineHeight: 1.35,
             margin: "0 0 4px",
             transition: "color 0.25s",
-            fontFamily: "'Space Grotesk', sans-serif"
+            fontFamily: "'Outfit', sans-serif"
           }}
         >
           {cert.name}

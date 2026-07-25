@@ -7,7 +7,7 @@ export const skillCategories = [
     color: "#818cf8",
     bg: "rgba(129,140,248,0.1)",
     border: "rgba(129,140,248,0.25)",
-    items: ["C++", "Java", "JavaScript"],
+    items: ["C++", "JavaScript"],
   },
   {
     cat: "Technologies",
@@ -28,6 +28,6 @@ export const skillCategories = [
     color: "#38bdf8",
     bg: "rgba(56,189,248,0.1)",
     border: "rgba(56,189,248,0.25)",
-    items: ["VS Code", "GitHub", "AWS"],
+    items: ["VS Code", "GitHub", "AWS", "DevOps", "Postman"],
   },
 ];

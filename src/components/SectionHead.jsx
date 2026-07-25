@@ -16,7 +16,7 @@ export function SectionHead({ label, title, color = "#a78bfa" }) {
       </span>
       <h2
         style={{
-          fontFamily: "'Space Grotesk', sans-serif",
+          fontFamily: "'Outfit', sans-serif",
           fontSize: "clamp(1.9rem, 4vw, 2.9rem)",
           fontWeight: 800,
           color: "#fff",

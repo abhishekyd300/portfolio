@@ -38,7 +38,7 @@ export function AchievementsSection() {
                 <div style={{ fontSize: 28, marginBottom: 10 }}>{a.icon}</div>
                 <div
                   style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontSize: 36,
                     fontWeight: 800,
                     color: "#fbbf24",
@@ -63,7 +63,7 @@ export function AchievementsSection() {
             </span>
             <h3
               style={{
-                fontFamily: "'Space Grotesk', sans-serif",
+                fontFamily: "'Outfit', sans-serif",
                 color: "#fff",
                 fontSize: 28,
                 fontWeight: 800,

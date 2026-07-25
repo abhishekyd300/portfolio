@@ -82,7 +82,7 @@ export function EducationSection() {
                     <div>
                       <h3
                         style={{
-                          fontFamily: "'Space Grotesk', sans-serif",
+                          fontFamily: "'Outfit', sans-serif",
                           color: "#fff",
                           fontSize: 19,
                           fontWeight: 700,

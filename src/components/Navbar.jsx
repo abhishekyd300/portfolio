@@ -37,7 +37,7 @@ export function Navbar({ active, setActive }) {
       >
         <span
           style={{
-            fontFamily: "'Space Grotesk', sans-serif",
+            fontFamily: "'Outfit', sans-serif",
             fontWeight: 800,
             fontSize: 22,
             color: "#a78bfa",
