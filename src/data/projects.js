@@ -20,16 +20,31 @@ export const projects = [
   {
     title: "Smart CV",
     subtitle: "AI Resume Builder",
-    tags: ["MERN", "Groq API", "AI/LLM", "PDF Export"],
+    tags: ["MERN", "GEMINI API", "AI/LLM", "PDF Export"],
     color: "#6366f1",
     icon: "🤖",
     liveUrl: "https://smartaicv.vercel.app/", // replace with live URL
     githubUrl: "https://github.com/abhishekyd300",
     bullets: [
-      "AI-powered resume builder using Groq LLM API",
+      "AI-powered resume builder using GEMINI API",
       "Dynamic content generation via AI prompts",
       "PDF export/download for generated resumes",
       "Template selection with live preview",
+    ],
+  },
+  {
+    title: "ContestHub",
+    subtitle: "Coding Contest & Assessment Platform",
+    tags: ["React", "Node.js", "Monaco Editor", "AI Generation"],
+    color: "#f59e0b",
+    icon: "⚡",
+    liveUrl: "https://contest-hub-mu.vercel.app/", // update live URL if available
+    githubUrl: "https://github.com/abhishekyd300/ContestHub",
+    bullets: [
+      "Multi-language code editor supporting 15+ languages",
+      "Timed contests with real-time test execution",
+      "Live leaderboards and instant scoring system",
+      "Admin tools with AI-powered question generation",
     ],
   },
 ];

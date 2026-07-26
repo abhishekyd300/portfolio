@@ -24,9 +24,11 @@ html {
 ::-webkit-scrollbar {
   width: 4px;
 }
+
 ::-webkit-scrollbar-track {
   background: #050714;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #4f46e5;
   border-radius: 4px;
@@ -34,23 +36,51 @@ html {
 
 /* ─── Animations ─── */
 @keyframes blob1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(38px, 26px) scale(1.08); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(38px, 26px) scale(1.08);
+  }
 }
 
 @keyframes blob2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-26px, 36px) scale(1.05); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-26px, 36px) scale(1.05);
+  }
 }
 
 @keyframes blob3 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(18px, -26px) scale(1.1); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(18px, -26px) scale(1.1);
+  }
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 /* ─── Hero Section Styling ─── */
@@ -272,4 +302,3 @@ html {
   object-fit: cover;
   object-position: top center;
 }
-

@@ -10,7 +10,7 @@ export function ProjectsSection() {
         <SectionHead label="Portfolio" title="Featured Projects" color="#22d3ee" />
       </FadeIn>
       
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 24 }}>
         {projects.map((p, i) => (
           <FadeIn key={p.title} delay={i * 0.15}>
             <div
