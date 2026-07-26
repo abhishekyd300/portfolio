@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export function Navbar({ active, setActive }) {
-  const links = ["About", "Skills", "Projects", "Achievements", "Contact"];
+  const links = ["About", "Experience", "Skills", "Projects", "Achievements", "Contact"];
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
