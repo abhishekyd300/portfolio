@@ -8,12 +8,14 @@ import { SkillsSection } from "./components/SkillsSection";
 import { ProjectsSection } from "./components/ProjectsSection";
 import { AchievementsSection } from "./components/AchievementsSection";
 import { ContactSection } from "./components/ContactSection";
+import { SpiralBackground } from "./components/SpiralBackground";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("About");
 
   return (
-    <div style={{ background: "#050714", minHeight: "100vh" }}>
+    <div style={{ background: "#050714", minHeight: "100vh", position: "relative" }}>
+      <SpiralBackground />
       <Navbar active={activeSection} setActive={setActiveSection} />
       <HeroSection />
       <AboutSection />
