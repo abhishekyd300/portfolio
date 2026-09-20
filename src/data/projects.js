@@ -47,4 +47,19 @@ export const projects = [
       "Admin tools with AI-powered question generation",
     ],
   },
+  {
+    title: "MiniCRM",
+    subtitle: "Role-Based Inventory & Challan Management System",
+    tags: ["TypeScript", "React", "Express", "Prisma", "PostgreSQL"],
+    color: "#06b6d4",
+    icon: "📦",
+    liveUrl: "https://minicrmportal.vercel.app",
+    githubUrl: "https://github.com/abhishekyd300/MiniERP_CRM_portal",
+    bullets: [
+      "Layered Express + TypeScript API with JWT auth & role middleware (Admin, Sales, Warehouse, Accounts)",
+      "Unified adjustStock() service logging StockMovement audit records for all manual & challan mutations",
+      "PostgreSQL via Supabase & Prisma with ChallanItem snapshotting (SKU, price) for historical integrity",
+      "Role-aware React SPA with permission-gated navigation and shared modular table/form components",
+    ],
+  },
 ];
