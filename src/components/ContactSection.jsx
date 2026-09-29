@@ -1,12 +1,14 @@
 import React from "react";
 import { FadeIn } from "./FadeIn";
 import { SectionHead } from "./SectionHead";
+import { SiGmail } from "react-icons/si";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export function ContactSection() {
   const handles = [
-    { label: "abhishekyd300@gmail.com", href: "mailto:abhishekyd300@gmail.com", icon: "📧" },
-    { label: "linkedin.com/in/abhishek-yadav-6207ab364", href: "https://linkedin.com/in/abhishek-yadav-6207ab364/", icon: "💼" },
-    { label: "github.com/abhishekyd300", href: "https://github.com/abhishekyd300", icon: "🐙" }
+    { label: "abhishekyd300@gmail.com", href: "mailto:abhishekyd300@gmail.com", icon: <SiGmail size={20} color="#EA4335" /> },
+    { label: "linkedin.com/in/abhishek-yadav-6207ab364", href: "https://linkedin.com/in/abhishek-yadav-6207ab364/", icon: <FaLinkedin size={20} color="#0A66C2" /> },
+    { label: "github.com/abhishekyd300", href: "https://github.com/abhishekyd300", icon: <FaGithub size={20} color="#ffffff" /> }
   ];
 
   return (
@@ -62,7 +64,7 @@ export function ContactSection() {
                 e.currentTarget.style.transform = "none";
               }}
             >
-              <span style={{ fontSize: 20 }}>{l.icon}</span>
+              <span style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 22 }}>{l.icon}</span>
               <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                 {l.label}
               </span>
