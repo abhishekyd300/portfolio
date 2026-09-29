@@ -6,7 +6,7 @@ export function CertCard({ cert }) {
 
   const displayImg = cert.badge && !imgErr ? cert.badge : null;
 
-  return (
+  const cardContent = (
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -20,7 +20,8 @@ export function CertCard({ cert }) {
         transform: hovered ? "translateY(-6px)" : "none",
         boxShadow: hovered ? `0 20px 56px ${cert.glow}` : "none",
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        height: "100%"
       }}
     >
       <div
@@ -107,5 +108,13 @@ export function CertCard({ cert }) {
         <p style={{ color: "rgba(255, 255, 255, 0.32)", fontSize: 12, margin: 0 }}>{cert.issuer}</p>
       </div>
     </div>
+  );
+
+  return cert.link ? (
+    <a href={cert.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
+      {cardContent}
+    </a>
+  ) : (
+    cardContent
   );
 }

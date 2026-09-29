@@ -12,6 +12,7 @@ export const certifications = [
     fallback: "☁️",
     color: "#FF9900",
     glow: "rgba(255,153,0,0.25)",
+    link: "/aws-practitioner.png"
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const certifications = [
     fallback: "🏗️",
     color: "#FF9900",
     glow: "rgba(255,153,0,0.25)",
+    link: "/aws-cloud-foundation.png"
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ export const certifications = [
     fallback: "🧠",
     color: "#60a5fa",
     glow: "rgba(96,165,250,0.25)",
+    link: "/aifundamentals.png"
   },
   {
     id: 4,
@@ -42,5 +45,28 @@ export const certifications = [
     fallback: "🌐",
     color: "#a78bfa",
     glow: "rgba(167,139,250,0.25)",
+    link: "/computer-network.png"
   },
+  {
+    id: 5,
+    name: "Data Analytics Essentials",
+    issuer: "Cisco Networking Academy",
+    tag: "Data Analytics",
+    badge: "/DataAnalyticsEssentials.png",
+    fallback: "📊",
+    color: "#34d399",
+    glow: "rgba(52,211,153,0.25)",
+    link: "/DataAnalyticsEssentials.png"
+  },
+  {
+    id: 6,
+    name: "Design and Analysis of Algorithm",
+    issuer: "CodeTantra",
+    tag: "Algorithms",
+    badge: "/CodeTantra.png",
+    fallback: "💻",
+    color: "#fbbf24",
+    glow: "rgba(251,191,36,0.25)",
+    link: "/CodeTantra.png"
+  }
 ];
