@@ -9,6 +9,7 @@ import { ProjectsSection } from "./components/ProjectsSection";
 import { AchievementsSection } from "./components/AchievementsSection";
 import { ContactSection } from "./components/ContactSection";
 import { SpiralBackground } from "./components/SpiralBackground";
+import { PortfolioChatbot } from "./components/chatbot";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("About");
@@ -25,7 +26,7 @@ export default function App() {
       <ProjectsSection />
       <AchievementsSection />
       <ContactSection />
-      
+      <PortfolioChatbot />
       <footer
         style={{
           textAlign: "center",
